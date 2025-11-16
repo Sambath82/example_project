@@ -14,7 +14,7 @@
 
 ///////////////////////////////////////////////////////////////////////////////
 // Set R and Wget path
-global r_path "/opt/homebrew/bin/R" 
+global r_path "/usr/local/bin/R" 
 global wget_path "/usr/local/bin/wget" 
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -43,7 +43,10 @@ cap adopath - PLUS
 cap adopath - SITE
 cap adopath - OLDPLACE
 adopath + "stata_packages"
-net set ado "stata_packages"
+net set ado "stata_packages" 
+
+// To link stata_packages folder to dropbox folder used this code in terminal
+// ln -s <root directory of dropbox folder for stata_package> <root directory of example_project>
 
 // Download packages 
 if $downloads == 1 {
